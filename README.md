@@ -41,7 +41,7 @@ Some sample data and scripts can be found in the /demo folder.
 
 * ___Make sure both model and data points are normalized to fit in \[-1,1\]<sup>3</sup> prior to running___ (we recommend first independently centralizing the two point clouds to the origin then simultaneously scaling them). The default initial translation cube is \[-0.5,0.5\]<sup>3</sup> (see “config_example.txt”).
 
-* The convergence threshold is set on the Sum of Squared Error (SSE) as in the code and the paper. For the ease of parameter setting for different numbers of data points, we use Mean of Squared Error (MSE) in the configuration (see “config_example.txt”). We use MSE threshold of 0.001 for the demos. ___Try smaller ones if your registration results are not satisfactory___.
+* The convergence threshold is set on the Sum of Squared Error (SSE) as in the code and the paper. For the ease of parameter setting for different data point numbers, we use Mean of Squared Error (MSE) in the configuration (see “config_example.txt”). We use MSE threshold of 0.001 for the demos. ___Try smaller ones if your registration results are not satisfactory___.
 
 * ___Make sure you tune the trimming percentage in the configuration file properly___,  if there are some outliers in the data pointset (i.e., some regions that are not overlapped by the model pointset). Note that a small portion of outliers may lead to competely wrong result if no trimming is used. Refer to our TPAMI paper for more details.
 
