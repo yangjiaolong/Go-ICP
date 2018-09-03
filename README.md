@@ -1,5 +1,10 @@
 # Go-ICP for globally optimal 3D pointset registration
 
+
+<img src="https://raw.githubusercontent.com/yangjiaolong/Go-ICP/master/bunny.png" style="max-width:100%;"/>
+
+(A demo video can be found on [here](http://jlyang.org/go-icp/).)
+
 ### Introduction
 
 This C++ code implements the Go-ICP algorithm (with trimming strategy for outlier handling). It is free software under the terms of the GNU General Public License (GPL) v3. Please refer to our papers for algorithm details:
