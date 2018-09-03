@@ -38,7 +38,7 @@ Some sample data and scripts can be found in the /demo folder.
 
 ### Notes
 
-* ___Both model and data points should be normalized into \[-1,1\]^3 prior to running (we recommend first independently centralizing the two point clouds to the origin then simultaneously scaling them).___ The default initial translation cube is \[-0.5,0.5\]^3 (see “config_example.txt”).
+* ___Both model and data points should be normalized to fit in \[-1,1\]<sup>3</sup> prior to running (we recommend first independently centralizing the two point clouds to the origin then simultaneously scaling them).___ The default initial translation cube is \[-0.5,0.5\]<sup>3</sup> (see “config_example.txt”).
 
 * The convergence threshold is set on the Sum of Squared Error (SSE) as in the code and the paper. For the ease of parameter setting for different numbers of data points, we use Mean of Squared Error (MSE) in the configuration (see “config_example.txt”). We use MSE threshold of 0.001 for the demos. Try smaller ones if your registration results are not satisfactory.
 
