@@ -42,7 +42,7 @@ Some sample data and scripts can be found in the /demo folder.
 
 * The convergence threshold is set on the Sum of Squared Error (SSE) as in the code and the paper. For the ease of parameter setting for different numbers of data points, we use Mean of Squared Error (MSE) in the configuration (see “config_example.txt”). We use MSE threshold of 0.001 for the demos. Try smaller ones if your registration results are not satisfactory.
 
-* ___Make sure you tune the trimming percentage in the configuration file properly___,  if there are some outliers in the data pointset (i.e., some regions that are not overlapped by the model pointset). Note that a small portion of outliers could lead to competely wrong result if no trimming is used. Refer to our TPAMI paper for more details.
+* ___Make sure you tune the trimming percentage in the configuration file properly___,  if there are some outliers in the data pointset (i.e., some regions that are not overlapped by the model pointset). Note that a small portion of outliers may lead to competely wrong result if no trimming is used. Refer to our TPAMI paper for more details.
 
 * Building 3D distance transform with (default) 300 discrete nodes in each dimension takes about 20-25s in our experiments. Using smaller values can reduce memory and building time costs, but it will also degrade the distance accuracy.
 
