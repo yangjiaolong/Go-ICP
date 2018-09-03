@@ -14,7 +14,7 @@ Globally Optimally*, International Conference on Computer Vision (__ICCV__), 201
 
 * J. Yang, H. Li, D. Campbell, Y. Jia, *Go-ICP: A Globally Optimal Solution to 3D ICP Point-Set Registration*, IEEE Transactions on Pattern Analysis and Machine Intelligence (__TPAMI__), 2016. [PDF](http://jlyang.org/tpami16_go-icp_preprint.pdf)
 
-Please read this file carefully. Some frequently asked questions regarding this implementation have answers here.
+Please read this file carefully prior to using the code. Some frequently-asked questions have answers here.
 
 ### Compiling
 
