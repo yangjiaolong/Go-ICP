@@ -4,10 +4,10 @@
 
 This C++ code implements the Go-ICP algorithm (with trimming strategy for outlier handling). It is free software under the terms of the GNU General Public License (GPL) v3. Please refer to our papers for algorithm details:
 
-Jiaolong Yang, Hongdong Li, Yunde Jia, Go-ICP: Solving 3D Registration Efficiently and
-Globally Optimally, International Conference on Computer Vision (ICCV), 2013.
+* Jiaolong Yang, Hongdong Li, Yunde Jia, Go-ICP: Solving 3D Registration Efficiently and
+Globally Optimally, International Conference on Computer Vision (ICCV), 2013. [PDF](http://jlyang.org/iccv13_go-icp.pdf)
 
-Jiaolong Yang, Hongdong Li, Dylan Campbell, Yunde Jia, Go-ICP: A Globally Optimal Solution to 3D ICP Point-Set Registration, IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI), 2016.
+* Jiaolong Yang, Hongdong Li, Dylan Campbell, Yunde Jia, Go-ICP: A Globally Optimal Solution to 3D ICP Point-Set Registration, IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI), 2016. [PDF](http://jlyang.org/tpami16_go-icp_preprint.pdf)
 
 
 ### Compiling
