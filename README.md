@@ -48,7 +48,7 @@ Some sample data and scripts can be found in the /demo folder.
 
 ### Acknowledgments
 
-This code uses the nanoflann library, and a simple matrix library written by Andreas Geiger. The distance transform implementation is adapted from the code of Alexander Vasilevskiy.
+This implementation uses the nanoflann library, and a simple matrix library written by Andreas Geiger. The distance transform implementation is adapted from the code of Alexander Vasilevskiy.
 
 
 ### Change log
