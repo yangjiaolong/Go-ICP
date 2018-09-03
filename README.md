@@ -14,6 +14,8 @@ Jiaolong Yang, Hongdong Li, Dylan Campbell, Yunde Jia, Go-ICP: A Globally Optima
 
 Use cmake to generate desired projects on different platforms.
 
+A pre-built Windows exe file can be found in [this zip file](http://jlyang.org/go-icp/Go-ICP_V1.3.zip)
+
 ### Running
 
 Run the compiled binary with following parameters: \<MODEL FILENAME\> \<DATA FILENAME\> \<NUM DOWNSAMPLED DATA POINTS\> \<CONFIGURATION FILENAME\> \<OUTPUT FILENAME\>, e.g. “./GoICP model data 1000 config output”, “GoICP.exe model.txt data.txt
@@ -26,6 +28,8 @@ Run the compiled binary with following parameters: \<MODEL FILENAME\> \<DATA FIL
 * \<CONFIGURATION FILENAME\> is the configuration file containing parameters for the algorithm, e.g. initial rotation and translation cubes, convergence threshold and trimming percentage. See “config_example.txt” for example.
   
 * \<OUTPUT FILENAME\> is the output file containing registration results. By default it contains the obtained 3x3 rotation matrix and 3x1 translation vector only. You can adapt the code to output other results as you wish.
+
+Some sample data and scripts can be found in the /demo folder. 
 
 ### Notes
 
