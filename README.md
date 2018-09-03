@@ -53,16 +53,25 @@ This code uses the nanoflann library, and a simple matrix library written by And
 
 ### Change log
 V1.3 (26-Jan-2015)
+
 Implemented the intro-selection algorithm
+
 Fixed some minor issues
 
+
 V1.2 (12-Jun-2014)
+
 Refined the quick-selection algorithm
+
 Added a deconstructor to distance transform class (Thanks to Nima Tajbakhsh)
 
+
 V1.1 (21-Apr-2014)
+
 Speeded up Trimmed-GoICP (around 2-5 times experimentally) using a quick-selection algorithm
 
+
 V1.0 (13-Feb-2014)
+
 First complete version for release
 
