@@ -28,7 +28,7 @@ Run the compiled binary with following parameters: \<MODEL FILENAME\> \<DATA FIL
 
 * \<MODEL FILENAME\> and \<DATA FILENAME\> are the point files of the model and data pointsets respectively. Each point file is in plain text format. It begins with a positive point number N in the first line, followed with N lines of X, Y, Z values of the N points.
 
-* \<NUM DOWNSAMPLED DATA POINTS\> indicates the number of down-sampled data points. ___The code assumes the input data points are randomly ordered and uses the first \<NUM DOWNSAMPLED DATA POINTS\> data points for registration. Make sure you randomly permute your data points or change the code for some other sampling strategies.___
+* \<NUM DOWNSAMPLED DATA POINTS\> indicates the number of down-sampled data points. The code assumes the input data points are randomly ordered and uses the first \<NUM DOWNSAMPLED DATA POINTS\> data points for registration. ___Make sure you randomly permute your data points or change the code for some other sampling strategies.___
 
 * \<CONFIGURATION FILENAME\> is the configuration file containing parameters for the algorithm, e.g. initial rotation and translation cubes, convergence threshold and trimming percentage. See “config_example.txt” for example.
   
@@ -38,11 +38,11 @@ Some sample data and scripts can be found in the /demo folder.
 
 ### Notes
 
-* ___Both model and data points should be normalized to fit in \[-1,1\]<sup>3</sup> prior to running (we recommend first independently centralizing the two point clouds to the origin then simultaneously scaling them).___ The default initial translation cube is \[-0.5,0.5\]<sup>3</sup> (see “config_example.txt”).
+* ___Make sure both model and data points are normalized to fit in \[-1,1\]<sup>3</sup> prior to running___ (we recommend first independently centralizing the two point clouds to the origin then simultaneously scaling them). The default initial translation cube is \[-0.5,0.5\]<sup>3</sup> (see “config_example.txt”).
 
 * The convergence threshold is set on the Sum of Squared Error (SSE) as in the code and the paper. For the ease of parameter setting for different numbers of data points, we use Mean of Squared Error (MSE) in the configuration (see “config_example.txt”). We use MSE threshold of 0.001 for the demos. Try smaller ones if your registration results are not satisfactory.
 
-* ___If there are some outliers in the data pointset (i.e., some regions that are not overlapped by the model pointset), you should tune the trimming percentage in the configuration file. Refer to our TPAMI paper for more details.___
+* ___Make sure you tune the trimming percentage in the configuration file properly___,  if there are some outliers in the data pointset (i.e., some regions that are not overlapped by the model pointset). Note that a small portion of outliers could lead to competely wrong result if no trimming is used. Refer to our TPAMI paper for more details.
 
 * Building 3D distance transform with (default) 300 discrete nodes in each dimension takes about 20-25s in our experiments. Using smaller values can reduce memory and building time costs, but it will also degrade the distance accuracy.
 
