@@ -7,7 +7,7 @@
 
 ### Introduction
 
-This C++ code implements the Go-ICP algorithm (with trimming strategy for outlier handling). It is free software under the terms of the GNU General Public License (GPL) v3. Please refer to our papers for algorithm details:
+This repository contains the C++ code for the Go-ICP algorithm (with trimming strategy for outlier handling). It is free software under the terms of the GNU General Public License (GPL) v3. Details of the Go-ICP algorithm can be found in our papers:
 
 * J. Yang, H. Li, Y. Jia, *Go-ICP: Solving 3D Registration Efficiently and
 Globally Optimally*, International Conference on Computer Vision (__ICCV__), 2013. [PDF](http://jlyang.org/iccv13_go-icp.pdf)
