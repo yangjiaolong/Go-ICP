@@ -1,6 +1,6 @@
 % Simple demos for the GoICP code
 % Demo1 uses 100 points randomly drawn in [-1,1]^3
-% Demo2 uses the Stanford bunny data
+% Demo2 uses the Stanford bunny data normalized in [-1,1]^3
 % Gaussian noise is added to the all points
 %
 % Jiaolong Yang <yangjiaolong@gmail.com>
