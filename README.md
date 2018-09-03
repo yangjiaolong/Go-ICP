@@ -21,14 +21,14 @@ Run the compiled binary with following parameters: \<MODEL FILENAME\> \<DATA FIL
 
 \<MODEL FILENAME\> and \<DATA FILENAME\> are the point files of the model and data pointsets respectively. Each point file is in plain text format. It begins with a positive point number N in the first line, followed with N lines of X, Y, Z values of the N points.
 
-\<NUM DOWNSAMPLED DATA POINTS\> indicates the number of down-sampled data points. Assuming the input data points are randomly ordered, the code will use the first <NUM DOWNSAMPLED DATA POINTS> data points for registration. Please adapt the code should you want to use some other sampling strategies.
+\<NUM DOWNSAMPLED DATA POINTS\> indicates the number of down-sampled data points. *__Assuming the input data points are randomly ordered, the code will use the first \<NUM DOWNSAMPLED DATA POINTS\> data points for registration. Please adapt the code should you want to use some other sampling strategies.__*
 
 \<CONFIGURATION FILENAME\> is the configuration file containing parameters for the algorithm, e.g. initial rotation and translation cubes, convergence threshold and trimming percentage. See “config_example.txt” for example.
   
 \<OUTPUT FILENAME\> is the output file containing registration results. By default it contains the obtained 3x3 rotation matrix and 3x1 translation vector only. You can adapt the code to output other results as you wish.
 
 ### Notes
-Both model and data points should be normalized into \[-1,1\]^3 prior to running (we recommend first independently centralizing the two point clouds to the origin then simultaneously scaling them). The default initial translation cube is \[-0.5,0.5\]^3 (see “config_example.txt”).
+*__Both model and data points should be normalized into \[-1,1\]^3 prior to running (we recommend first independently centralizing the two point clouds to the origin then simultaneously scaling them)__*. The default initial translation cube is \[-0.5,0.5\]^3 (see “config_example.txt”).
 
 The convergence threshold is set on the Sum of Squared Error (SSE) as in the code and the paper. For the ease of parameter setting for different numbers of data points, we use Mean of Squared Error (MSE) in the configuration (see “config_example.txt”). We use MSE threshold of 0.001 for the demos. Try smaller ones if your registration results are not satisfactory.
 
