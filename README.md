@@ -19,7 +19,7 @@ Globally Optimally*, International Conference on Computer Vision (__ICCV__), 201
 
 Use cmake to generate desired projects on different platforms.
 
-A pre-built Windows exe file can be found in [this zip file](http://jlyang.org/go-icp/Go-ICP_V1.3.zip)
+A pre-built Windows exe file can be found in [this zip file](http://jlyang.org/go-icp/Go-ICP_V1.3.zip).
 
 ### Running
 
