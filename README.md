@@ -32,6 +32,8 @@ Run the compiled binary with following parameters: \<MODEL FILENAME\> \<DATA FIL
 
 The convergence threshold is set on the Sum of Squared Error (SSE) as in the code and the paper. For the ease of parameter setting for different numbers of data points, we use Mean of Squared Error (MSE) in the configuration (see “config_example.txt”). We use MSE threshold of 0.001 for the demos. Try smaller ones if your registration results are not satisfactory.
 
+*__If there are some outliers in the data pointset (i.e., some regions that are not overlapped by the model pointset), please tune the . Refer to our TPAMI paper for more details.__*
+
 Building 3D distance transform with (default) 300 discrete nodes in each dimension takes about 20-25s in our experiments. Using smaller values can reduce memory and building time costs, but it will also degrade the distance accuracy.
 
 ### Acknowledgments
