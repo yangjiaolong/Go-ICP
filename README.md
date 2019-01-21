@@ -47,6 +47,10 @@ Some sample data and scripts can be found in the /demo folder.
 
 * Building 3D distance transform with (default) 300 discrete nodes in each dimension takes about 20-25s in our experiments. Using smaller values can reduce memory and building time costs, but it will also degrade the distance accuracy.
 
+### Other langueage
+
+A python wrapper by @aalavandhaann can be found at https://github.com/aalavandhaann/go-icp_cython
+
 ### Acknowledgments
 
 This implementation uses the nanoflann library, and a simple matrix library written by Andreas Geiger. The distance transform implementation is adapted from the code of Alexander Vasilevskiy.
