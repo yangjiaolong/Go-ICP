@@ -22,6 +22,11 @@ Use cmake to generate desired projects on different platforms.
 
 A pre-built Windows exe file can be found in [this zip file](http://jlyang.org/go-icp/Go-ICP_V1.3.zip).
 
+### Terminology
+
+Data points: points of the source point set to be transformed.
+Model points: points of the target point set.
+
 ### Notes
 
 * ___Make sure both model and data points are normalized to fit in \[-1,1\]<sup>3</sup> prior to running___ (we recommend first independently centralizing the two point clouds to the origin then simultaneously scaling them). The default initial translation cube is \[-0.5,0.5\]<sup>3</sup> (see “config_example.txt”).
