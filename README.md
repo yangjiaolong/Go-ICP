@@ -22,6 +22,18 @@ Use cmake to generate desired projects on different platforms.
 
 A pre-built Windows exe file can be found in [this zip file](http://jlyang.org/go-icp/Go-ICP_V1.3.zip).
 
+### Notes
+
+* ___Make sure both model and data points are normalized to fit in \[-1,1\]<sup>3</sup> prior to running___ (we recommend first independently centralizing the two point clouds to the origin then simultaneously scaling them). The default initial translation cube is \[-0.5,0.5\]<sup>3</sup> (see “config_example.txt”).
+
+* The convergence threshold is set on the Sum of Squared Error (SSE) as in the code and the paper. For the ease of parameter setting for different data point numbers, we use Mean of Squared Error (MSE) in the configuration (see “config_example.txt”). We use MSE threshold of 0.001 for the demos. ___Try smaller ones if your registration results are not satisfactory___.
+
+* ___Make sure you tune the trimming percentage in the configuration file properly___,  if there are some outliers in the data pointset (i.e., some regions that are not overlapped by the model pointset). Note that a small portion of outliers may lead to competely wrong result if no trimming is used. Refer to our TPAMI paper for more details.
+
+* ___Do NOT subsample the model points!___ Since we use 3D distance transform for closest distance computation, model point number does not affect running speed. Subsampling the model points may increase the optimal registration error thus slowing down the BnB convergance.
+
+* Building 3D distance transform with (default) 300 discrete nodes in each dimension takes about 20-25s in our experiments. Using smaller values can reduce memory and building time costs, but it will also degrade the distance accuracy.
+
 ### Running
 
 Run the compiled binary with following parameters: \<MODEL FILENAME\> \<DATA FILENAME\> \<NUM DOWNSAMPLED DATA POINTS\> \<CONFIGURATION FILENAME\> \<OUTPUT FILENAME\>, e.g. “./GoICP model data 1000 config output”, “GoICP.exe model.txt data.txt
@@ -36,18 +48,6 @@ Run the compiled binary with following parameters: \<MODEL FILENAME\> \<DATA FIL
 * \<OUTPUT FILENAME\> is the output file containing registration results. By default it contains the obtained 3x3 rotation matrix and 3x1 translation vector only. You can adapt the code to output other results as you wish.
 
 Some sample data and scripts can be found in the /demo folder. 
-
-### Notes
-
-* ___Make sure both model and data points are normalized to fit in \[-1,1\]<sup>3</sup> prior to running___ (we recommend first independently centralizing the two point clouds to the origin then simultaneously scaling them). The default initial translation cube is \[-0.5,0.5\]<sup>3</sup> (see “config_example.txt”).
-
-* The convergence threshold is set on the Sum of Squared Error (SSE) as in the code and the paper. For the ease of parameter setting for different data point numbers, we use Mean of Squared Error (MSE) in the configuration (see “config_example.txt”). We use MSE threshold of 0.001 for the demos. ___Try smaller ones if your registration results are not satisfactory___.
-
-* ___Make sure you tune the trimming percentage in the configuration file properly___,  if there are some outliers in the data pointset (i.e., some regions that are not overlapped by the model pointset). Note that a small portion of outliers may lead to competely wrong result if no trimming is used. Refer to our TPAMI paper for more details.
-
-* ___Do NOT subsample the model points!___. Since we use 3D distance transform for closest distance computation, model point number does not affect running speed. Subsampling the model points may increase the optimal registration error thus slowing down the BnB convergance.
-
-* Building 3D distance transform with (default) 300 discrete nodes in each dimension takes about 20-25s in our experiments. Using smaller values can reduce memory and building time costs, but it will also degrade the distance accuracy.
 
 ### Other langueage
 
