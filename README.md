@@ -25,6 +25,7 @@ A pre-built Windows exe file can be found in [this zip file](http://jlyang.org/g
 ### Terminology
 
 Data points: points of the source point set to be transformed.
+
 Model points: points of the target point set.
 
 ### Notes
