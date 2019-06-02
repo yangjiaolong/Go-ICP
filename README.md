@@ -45,6 +45,8 @@ Some sample data and scripts can be found in the /demo folder.
 
 * ___Make sure you tune the trimming percentage in the configuration file properly___,  if there are some outliers in the data pointset (i.e., some regions that are not overlapped by the model pointset). Note that a small portion of outliers may lead to competely wrong result if no trimming is used. Refer to our TPAMI paper for more details.
 
+* ___Do NOT subsample the model points!___. Since we use 3D distance transform for closest distance computation, model point number does not affect running speed. Subsampling the model points may increase the optimal registration error thus slowing down the BnB convergance.
+
 * Building 3D distance transform with (default) 300 discrete nodes in each dimension takes about 20-25s in our experiments. Using smaller values can reduce memory and building time costs, but it will also degrade the distance accuracy.
 
 ### Other langueage
